@@ -15,6 +15,11 @@ const reducer=(state=initialstate,action)=>{
                 return{
                     users:[...tempuser]
                 }
+                case "REMOVE_USER":
+                    return{
+                        users:[],
+                    }
+               
             
             default:
                 return state;

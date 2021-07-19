@@ -2,6 +2,7 @@
 import  {useSelector,useDispatch} from "react-redux"
 import Navbar from '../Components/Navbar'
 import { deleteuser } from "../Store/actions/user";
+import { removeuser } from "../Store/actions/user";
 
 
 const User = () => {
@@ -10,7 +11,7 @@ const users = useSelector(state => state.users);
     return (
         <div>
           <Navbar/>
-          
+          <button onClick={()=>dispatch(removeuser())}>Remove All</button><br/>
           {users.map((user,index)=>{
             return(
               <div key={index}>

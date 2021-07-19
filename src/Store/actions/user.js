@@ -11,3 +11,9 @@ export const deleteuser=(id)=>{
     id:id,
     }
 }
+export const removeuser=()=>{
+    return{
+    type :"REMOVE_USER",
+   
+    }
+}
